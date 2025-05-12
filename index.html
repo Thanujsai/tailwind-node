@@ -6,15 +6,19 @@
     <link href="/css/tailwind.css" rel="stylesheet">
     <title>Tailwind</title>
 </head>
-<body class="bg-gray-100">
-    <div class="px-10 py-12 place-items-center">
+<body class="bg-gray-100 flex"><!--sm:bg-black md:bg-yellow-300 lg:bg-pink-300 xl:bg-blue-300 2xl:bg-green-300 these sizes are min width, meaning if min width is sm then bg-black, next breakpoint is if min-w is md then bg-yellow etc-->
+    <div class="px-10 py-12 max-w-md mx-auto sm:max-w-xl"><!--mx-auto It horizontally centers a block-level element inside its parent container, only if the element has a fixed or constrained width (like with w-64 or max-w-md), increasing width of the div in small screens-->
         <img src="img/logo.svg" alt="Logo" class="h-10">
-        <img src="img/beach-work.jpg" alt="" class="mt-6 rounded-lg shadow-xl h-48">
-        <h1 class="mt-6 text-2xl font-bold text-gray-900">You can work from anywhere. <br><span class="text-indigo-500">Take advantage of it.</span></h1>
-        <p class="mt-2 text-gray-600 max-w-[350px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
-        <div class="mt-10 place-content-start cursor-pointer">
-            <a href="" class="inline-block px-5 py-3 bg-indigo-500 rounded-lg text-white uppercase tracking-wider font-semibold shadow-lg border border-indigo-500 hover:text-indigo-500 hover:bg-white transition-all duration-300">Book your escape</a>
+        <img src="img/beach-work.jpg" alt="" class="mt-6 rounded-lg shadow-xl sm:h-64 sm:w-full sm:object-cover object-center lg:hidden"><!--hidden in large screens-->
+        <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl">You can work from anywhere.<span class="text-indigo-500">Take advantage of it.</span></h1>
+        <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+        <div class="mt-10 place-content-start cursor-pointer sm:mt-6">
+            <a href="" class="inline-block px-5 py-3 bg-indigo-500 rounded-lg text-white uppercase tracking-wider font-semibold shadow-lg border text-sm sm:text-base border-indigo-500 hover:text-indigo-500 hover:bg-white transition-all duration-300">Book your escape</a>
         </div>
+    </div>
+
+    <div>
+        <img src="img/beach-work.jpg" alt="" class="hidden lg:block"><!--block/shown in large screens-->
     </div>
 </body>
 </html>
