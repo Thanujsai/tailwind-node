@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html"],
+  content: ["./*.html"],/*The content field in tailwind.config.js tells Tailwind which files to scan for class names so it can generate the corresponding CSS.*/
   theme: {
     extend: {
       colors: {
