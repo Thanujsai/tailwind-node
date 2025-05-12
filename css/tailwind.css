@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
+
+/* .btn { this is a custom button class, can be used anywhere, it's placed before utilities bcoz if we want to add any other class to this button say px-10 while using it class="btn px-10", it will be added in the utilities section which comes after this, so that css will be applied since this is place before utilities 
+    @apply inline-block px-5 py-3 bg-indigo-500 rounded-lg text-white uppercase tracking-wider font-semibold shadow-lg border text-sm sm:text-base border-indigo-500 hover:text-indigo-500 hover:bg-white transition-all duration-300
+} */
+
 @tailwind utilities;
+
+@layer components {
+    .btn {/* instead of using the above approach we can add an @layer annotation and choose under which layer we want to add this class, here we are adding it under components layer */
+        @apply inline-block px-5 py-3 bg-indigo-500 rounded-lg text-white uppercase tracking-wider font-semibold shadow-lg border text-sm sm:text-base border-indigo-500 hover:text-indigo-500 hover:bg-white transition-all duration-300
+    }
+}
