@@ -6,12 +6,12 @@
     <link href="/css/tailwind.css" rel="stylesheet">
     <title>Tailwind</title>
 </head>
-<body class="bg-gray-300"><!--sm:bg-black md:bg-yellow-300 lg:bg-pink-300 xl:bg-blue-300 2xl:bg-green-300 these sizes are min width, meaning if min width is sm then bg-black, next breakpoint is if min-w is md then bg-yellow etc-->
+<body class="bg-gray-200"><!--sm:bg-black md:bg-yellow-300 lg:bg-pink-300 xl:bg-blue-300 2xl:bg-green-300 these sizes are min width, meaning if min width is sm then bg-black, next breakpoint is if min-w is md then bg-yellow etc-->
     <div class="bg-gray-100 grid lg:grid-cols-2 2xl:grid-cols-5"><!-- This grid-cols-2 looks good in large screens only since only in large screns the second div inside this div which is the image beside in visible, in small screens the 2nd div image is hidden therefore the second div will be empty-->
         <div class="px-10 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2"><!--mx-auto It horizontally centers a block-level element inside its parent container, only if the element has a fixed or constrained width (like with w-64 or max-w-md), increasing width of the div in small screens-->
             <!-- for 2xl panels i have 5 cols out of which 2cols are used for this div -->
             <div class="xl:max-w-xl">
-                <img src="img/logo.svg" alt="Logo" class="h-10">
+                <img src="img/logo-brand.svg" alt="Logo" class="h-10">
                 <img src="img/beach-work.jpg" alt="" class="mt-6 rounded-lg shadow-xl sm:h-64 sm:w-full sm:object-cover object-center lg:hidden"><!--hidden in large screens-->
                 <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">You can work from anywhere.
                     <br class="hidden lg:inline md:inline" />
@@ -27,6 +27,94 @@
         <div class="hidden relative lg:block 2xl:col-span-3"><!--hidden in small and medium screens-->
             <!-- for 2xl panels i have 5 cols out of which 3cols are used for this div -->
             <img class="absolute inset-0 w-full h-full object-cover object-center" src="img/beach-work.jpg" alt=""><!--block/shown in large screens-->
+        </div>
+    </div>
+
+    <!-- popular destinations -->
+    <div class="max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-8 lg:px-12 py-8">
+        <h2 class="text-xl text-gray-900">Popular destinations</h2>
+        <p class="mt-2 text-gray-600">A selection of great work-friendly cities with lots to see and explore.</p>
+        <div class="grid grid-rows-2" id="popular-destinations">
+            <div class="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+                <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                    <img src="/img/toronto.jpg" alt="" class="h-[132px] w-32 flex-shrink-0">
+                    <div class="px-6 py-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Toronto</h3>
+                        <p class="text-gray-600">$120 / night average</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+                            Explore 76 properties
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                    <img src="/img/chicago.jpg" alt="" class="h-[132px] w-32 flex-shrink-0">
+                    <div class="px-6 py-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Chicago</h3>
+                        <p class="text-gray-600">$120 / night average</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+                            Explore 76 properties
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                    <img src="/img/colorado.jpg" alt="" class="h-[132px] w-32 flex-shrink-0">
+                    <div class="px-6 py-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Colorado</h3>
+                        <p class="text-gray-600">$120 / night average</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+                            Explore 76 properties
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+                <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                    <img src="/img/malibu.jpg" alt="" class="h-[132px] w-32 flex-shrink-0">
+                    <div class="px-6 py-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Malibu</h3>
+                        <p class="text-gray-600">$120 / night average</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+                            Explore 76 properties
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                    <img src="/img/miami.jpg" alt="" class="h-[132px] w-32 flex-shrink-0">
+                    <div class="px-6 py-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Miami</h3>
+                        <p class="text-gray-600">$120 / night average</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+                            Explore 76 properties
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                    <img src="/img/seattle.jpg" alt="" class="h-[132px] w-32 flex-shrink-0">
+                    <div class="px-6 py-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Seattle</h3>
+                        <p class="text-gray-600">$120 / night average</p>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
+                            Explore 76 properties
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </body>
